@@ -5,8 +5,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = "browser-f|mac10.11.4|24.box"
   config.vm.network "public_network"
-
-  config.ssh.private_key_path = "/Users/jenkins/old-vagrant-private-key"
+  config.ssh.username = "vagrant"
+  config.ssh.passowrd = "vagrant"
+#  config.ssh.private_key_path = "/Users/jenkins/old-vagrant-private-key"
 
   config.vm.provider "vmware_fusion" do |v|
     v.vmx["remotedisplay.vnc.enabled"] = "TRUE"
