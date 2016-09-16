@@ -1,8 +1,8 @@
-# -*- mode: ruby -*-
+# -*- mode: ruby -*-i
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "cliqz/cliqzfox-win10-builder_vmware"
+  config.vm.box = "browser-f|windows10|29.box"
 
   config.vm.network "public_network"
 

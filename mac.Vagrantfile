@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "customtest"
+  config.vm.box = "browser-f|mac10.11.4|24.box"
   config.vm.network "public_network"
 
   config.ssh.private_key_path = "/Users/jenkins/old-vagrant-private-key"
