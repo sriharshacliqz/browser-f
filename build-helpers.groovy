@@ -79,8 +79,9 @@ def withVagrant(vagrantFilePath = "Vagrantfile", Closure body) {
         withEnv([
             "VAGRANT_VAGRANTFILE=${vagrantFilePath}",
             "NODE_SECRET=${nodeSecret}",
-            "NODE_ID=${nodeId}",
+            "NODE_ID=${nodeId}"
             ]) {
+            print vagrantFilePath
             sh "pwd"
             sh "cat ${vagrantFilePath}"
             sh "ls"
