@@ -14,7 +14,7 @@ node(WIN_BUILD_NODE) {
     ])
 
     def helpers = load "artifacts/build-helpers.groovy"
-
+    print "$VAGRANTFILE"
     helpers.withVagrant("artifacts/${VAGRANTFILE}") { nodeId ->
       node(nodeId) {
         stage("Checkout") {

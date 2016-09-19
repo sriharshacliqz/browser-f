@@ -81,7 +81,9 @@ def withVagrant(vagrantFilePath = "Vagrantfile", Closure body) {
             "NODE_SECRET=${nodeSecret}",
             "NODE_ID=${nodeId}",
             ]) {
-
+            sh "pwd"
+            sh "${vagrantFilePath}"
+            sh "ls"
             sh 'vagrant halt --force'
             sh  'vagrant up'
         }
