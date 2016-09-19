@@ -22,9 +22,9 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", run: "always", inline: <<-SHELL
-    New-Item -ItemType Directory -Force -Path c:\jenkins 
-    New-Item -ItemType Directory -Force -Path c:\jenkins\workspace
-    New-Item -ItemType Directory -Force -Path c:\jenkins\workspace\browser-f-win
+    New-Item -ItemType Directory -Force -Path 'c:\\jenkins'
+    New-Item -ItemType Directory -Force -Path 'c:\\jenkins\\workspace'
+    New-Item -ItemType Directory -Force -Path 'c:\\jenkins\\workspace\\browser-f-win'
     cd c:/jenkins
     Remove-Item slave.jar -ErrorAction SilentlyContinue
     wget #{ENV['JENKINS_URL']}/jnlpJars/slave.jar -o slave.jar

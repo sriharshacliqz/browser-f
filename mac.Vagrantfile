@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "browser-f|mac10.11.4|24.box"
+  config.vm.box = "browser-f|mac10.11.4|30"
   config.vm.network "public_network"
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
