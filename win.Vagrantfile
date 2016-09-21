@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "browser-f|windows10|34"
+  config.vm.box = "browser-f|windows10|37"
 
   config.vm.network "public_network"
 
@@ -22,9 +22,6 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", run: "always", inline: <<-SHELL
-    New-Item -ItemType Directory -Force -Path 'c:\\jenkins'
-    New-Item -ItemType Directory -Force -Path 'c:\\jenkins\\workspace'
-    New-Item -ItemType Directory -Force -Path 'c:\\jenkins\\workspace\\browser-f-win'
     cd c:/jenkins
     Remove-Item slave.jar -ErrorAction SilentlyContinue
     wget #{ENV['JENKINS_URL']}/jnlpJars/slave.jar -o slave.jar
