@@ -117,7 +117,7 @@ IF DEFINED CQZ_BUILD_DE_LOCALIZATION (
 :: UPLOAD AND SUBMIT
 :::::::::::::::::::::::::::::::::::
 ECHO [%TIME%] INFO: Injected tag area successful. Uploading...
-ECHO cd $CQZ_WORKSPACE ^^^&^^^& ./magic_upload_files.sh | call C:\mozilla-build\start-shell-msvc2013.bat
+ECHO cd $CQZ_WORKSPACE ^^^&^^^& ./magic_upload_files.sh | call C:\mozilla-build\start-shell-msvc2015.bat
 IF ERRORLEVEL 1 (
   ECHO [%TIME%] ERROR: Upload failed! Exiting.
   EXIT 1
